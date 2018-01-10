@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .container {
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .column {
+      flex: 25%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="toggle_btn">
+    <button class="one" onclick="toggleBtn(evt)">one</button>
+    <button class="two" onclick="toggleBtn(evt)">two</button>
+    <button class="four" onclick="toggleBtn(evt)">four</button>
+  </div>
+
+  <div class="container">
+    <div class="column">
+      <img src="./img/falls2.jpg">
+      <img src="./img/ocean.jpg">
+      <img src="./img/rocks.jpg">
+      <img src="./img/underwater.jpg">
+      <img src="./img/wedding.jpg">
+    </div>
+    <div class="column">
+      <img src="./img/falls2.jpg">
+      <img src="./img/ocean.jpg">
+      <img src="./img/rocks.jpg">
+      <img src="./img/underwater.jpg">
+      <img src="./img/wedding.jpg">
+    </div>
+    <div class="column">
+      <img src="./img/falls2.jpg">
+      <img src="./img/ocean.jpg">
+      <img src="./img/rocks.jpg">
+      <img src="./img/underwater.jpg">
+      <img src="./img/wedding.jpg">
+    </div>
+  </div>
+
+  <script>
+    function toggleBtn() {
+      var colNum = document.getElementsByClassName("column");
+      var gridNum = evt.currentTarget.className;
+      for (var i = 0; i < colNum.length; i++) {
+        colNum[i].classList.toggle(gridNum);
+      }
+    }
+  </script>
+</body>
+
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .menu {
+      width: 0%;
+      height: auto;
+      background-color: #000;
+      float: left;
+      overflow: hidden;
+
+    }
+
+    .menu a {
+      display: block;
+      color: #fff;
+    }
+
+    .main {
+      width: 75%;
+      background-color: grey;
+      float: left;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="menu">
+    <a href="#">about</a>
+    <a href="#">home</a>
+    <a href="#">product</a>
+
+  </div>
+  <div class="main">
+    <button onclick="open_menu()">open menu</button>
+    <p>The code in index.html is pretty simple, we have 4 sections with a background image .bcg and a content container .hsContainer (home slide container) which is by default horizontally and vertically centered.
+    </p>
+  </div>
+
+  <script>
+    function open_menu() {
+      document.getElementsByClassName("menu")[0].style.width = "25%";
+    }
+  </script>
+
+</body>
+<html>

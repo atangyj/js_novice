@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+  <p id="demo"></p>
+
+  <script>
+    var text = "I am Alice, this is my portfolio.";
+    var speed = 50;
+
+    function typing() {
+      for (var i = 0; i < text.length; i++) {
+        document.getElementById("demo").innerHTML += text.charAt(i);
+        setTimeout(typeWriter, speed);
+      }
+
+    }
+  </script>
+</body>
+
+
+
+</html>

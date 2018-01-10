@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    #button {
+      padding: 5px;
+      background-color: green;
+      color: white;
+    }
+
+    #bar {
+      width: 0px;
+      height: 100px;
+      background: green;
+    }
+  </style>
+</head>
+
+<body>
+  <button onclick="progress()">RUN</button>
+  <div id="bar"></div>
+  <div id="value"></div>
+
+  <script>
+    function progress() {
+      var i = 1;
+      var total_score = 100;
+      setInterval((function() {
+        if (i <= total_score) {
+          document.getElementById("bar").style.width = i + "%";
+          i++;
+        }
+      }), 10)
+
+    }
+  </script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .bg {
+      background-color: blue;
+      color: #fff;
+      font-size: 60px;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="bg">
+    <p> 2018 Remaining</p>
+    <p id="days"></p>
+    <p id="hours"></p>
+    <p id="mins"></p>
+    <p id="seconds"></p>
+  </div>
+  <script>
+    var countdownday = new Date(2019, 0, 1);
+
+    setInterval(function() {
+      var today = new Date();
+      var countcolor = today.getSeconds();
+      var color = "#b" + countcolor;
+      var distance = countdownday.getTime() - today.getTime();
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("days").innerHTML = days + " days";
+      document.getElementById("hours").innerHTML = hours + " hours";
+      document.getElementById("mins").innerHTML = mins + " mins";
+      document.getElementById("seconds").innerHTML = seconds + " s";
+      document.querySelector(".bg").style.backgroundColor = color;
+
+    }, 1000);
+  </script>
+
+</body>
+
+</html>
